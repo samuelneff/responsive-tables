@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran');
-/* @import url('https://fonts.googleapis.com/css?family=Varela+Round'); */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Varela+Round');
+/* colors
+   https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.75,0.5077714426389784,0.1348208718077432,0.5,0.3385142950926523,0.08988058120516207,1,0.6770285901853046,0.17976116241032414,0.25,0.16925714754632615,0.044940290602581034,0.9,0.6093257311667741,0.16178504616929174&swatchOrder=0,1,2,3,4
+ */
+
 body {
     font-family: 'Varela Round', 'Calibri', sans-serif;
     font-size: 24px;
