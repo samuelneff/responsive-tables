@@ -1,11 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Varela+Round');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css');
+
 /* colors
    https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.75,0.5077714426389784,0.1348208718077432,0.5,0.3385142950926523,0.08988058120516207,1,0.6770285901853046,0.17976116241032414,0.25,0.16925714754632615,0.044940290602581034,0.9,0.6093257311667741,0.16178504616929174&swatchOrder=0,1,2,3,4
  */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Varela Round', 'Calibri', sans-serif;
     font-size: 24px;
+    padding: 6px 0 50px 0;
+}
+
+h1 {
+    margin-top: -4px;
+    padding-left: 6px;
+    font-size: 1.5em;
+}
+
+h2 {
+    padding-left: 44px;
+    color: #999;
+    font-size: 1.25em;
 }
 
 a {
@@ -21,20 +42,13 @@ a:active {
     color: #7F5617;
 }
 
-table,
-thead,
-tbody,
-tfoot,
-tr,
-td,
-th
-{
-    border: 0;
-    border-collapse: collapse;
-    border-spacing: 0;
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
+table {
+    width: 100%;
+    margin-top: 18px;
+}
+
+tr {
+    border-bottom: 1px solid #d0d0d0;    
 }
 
 th {
@@ -58,3 +72,148 @@ td:first-child {
 td:last-child {
     padding-right: 12px;
 }
+
+td.searches,
+td.characters,
+td.lines {
+    text-align: right;
+}
+
+td.characters {
+    padding-right: 24px;
+}
+
+@media screen and (max-width: 575px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        padding-left: 40px;
+        margin-bottom: -8px;
+        font-size: 1.25em;
+    }
+
+    table,
+    tbody,
+    tr,
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        position: relative;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody > tr:first-child {
+        margin-top: 84px;
+    }
+
+    tbody > tr:first-child::before,
+    tbody > tr:first-child::after {
+        display: block;
+        position: absolute;
+        top: -66px;
+        width: 51%;
+        height: 60px;
+
+        padding: 16px 18px 0 18px;
+
+        background-color: #7F5617;
+        font-family: 'Noto Sans', 'Calibri', 'sans-serif';
+        font-weight: bold;
+        color: White;
+        border-bottom: 2px solid #FFAD2E;
+        letter-spacing: 0.05em;
+    }
+
+    tbody > tr:first-child::before {
+        content: "Play";
+        left: 0;
+    }
+
+    tbody > tr:first-child::after {
+        content: "Searches";
+        right: 0;
+    }
+
+    td.play {
+        max-width: 280px;
+        padding-left: 36px;
+    }
+
+    td.play::before {
+        position: absolute;
+        display: block;
+        top: 6px;
+        left: 9px;
+        color: #999;
+    }
+
+    tr:not(.expanded) > td.play::before {
+        content: "+";
+    }
+
+    tr.expanded > td.play::before {
+        content: "-";
+    }
+
+    tr:not(.expanded) > td.searches {
+        position: absolute;
+        top: 0;
+        padding-right: 12px;
+    }
+
+    tr:not(.expanded) > td.genre,
+    tr:not(.expanded) > td.characters,
+    tr:not(.expanded) > td.lines {
+        display: none;
+    }
+
+    tr.expanded > td.genre,
+    tr.expanded > td.searches,
+    tr.expanded > td.characters,
+    tr.expanded > td.lines {
+        position: relative;
+        text-align: right;
+        padding-right: 12px;
+    }
+
+    tr.expanded > td.genre::before,
+    tr.expanded > td.searches::before,
+    tr.expanded > td.characters::before,
+    tr.expanded > td.lines::before {
+        position: absolute;
+        display: block;
+        left: 48px;
+        color: #999;
+    }
+
+    tr.expanded > td.genre::before {
+        content: "Genre";
+    }
+    tr.expanded > td.searches::before {
+        content: "Searches";
+    }
+    tr.expanded > td.characters::before {
+        content: "Characters";
+    }
+    tr.expanded > td.lines::before {
+        content: "Lines";
+    }
+
+
+}
+
