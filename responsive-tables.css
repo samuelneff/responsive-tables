@@ -30,16 +30,16 @@ h2 {
 }
 
 a {
-    color: #BF8122;
+    color: #c55e54;
     text-decoration: none;
 }
 
 a:hover {
-    color: #E59B29;
+    color: #de5748;
 }
 
 a:active {
-    color: #7F5617;
+    color: #a9301f;
 }
 
 table {
@@ -48,12 +48,12 @@ table {
 }
 
 tr {
-    border-bottom: 1px solid #d0d0d0;    
+    border-bottom: 1px solid #f5f5f5;    
 }
 
 th {
     padding: 12px;
-    background-color: #7F5617;
+    background-color: #a9301f;
     font-family: 'Noto Sans', 'Calibri', 'sans-serif';
     font-weight: bold;
     color: White;
@@ -131,7 +131,7 @@ td.characters {
 
         padding: 16px 18px 0 18px;
 
-        background-color: #7F5617;
+        background-color: #a9301f;
         font-family: 'Noto Sans', 'Calibri', 'sans-serif';
         font-weight: bold;
         color: White;
