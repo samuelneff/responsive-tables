@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shakespeare's most popular plays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Varela+Round');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css');
+
+        /* colors
+           https://color.adobe.com/create/color-wheel/?base=2&rule=Shades&selected=3&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.75,0.5077714426389784,0.1348208718077432,0.5,0.3385142950926523,0.08988058120516207,1,0.6770285901853046,0.17976116241032414,0.25,0.16925714754632615,0.044940290602581034,0.9,0.6093257311667741,0.16178504616929174&swatchOrder=0,1,2,3,4
+         */
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Varela Round', 'Calibri', sans-serif;
+            font-size: 24px;
+            padding: 6px 0 50px 0;
+        }
+
+        h1 {
+            margin-top: -4px;
+            padding-left: 6px;
+            font-size: 1.5em;
+        }
+
+        h2 {
+            padding-left: 44px;
+            color: #999;
+            font-size: 1.25em;
+        }
+
+        a {
+            color: #c55e54;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #de5748;
+        }
+
+        a:active {
+            color: #a9301f;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 18px;
+        }
+
+        tr {
+            border-bottom: 1px solid #f5f5f5;    
+        }
+
+        th {
+            padding: 12px;
+            background-color: #a9301f;
+            font-family: 'Noto Sans', 'Calibri', 'sans-serif';
+            font-weight: bold;
+            color: White;
+            border-bottom: 2px solid #FFAD2E;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 6px;
+        }
+
+        td:first-child {
+            padding-left: 12px;
+        }
+
+        td:last-child {
+            padding-right: 12px;
+        }
+
+        td.searches,
+        td.characters,
+        td.lines {
+            text-align: right;
+        }
+
+        td.characters {
+            padding-right: 24px;
+        }
+
+        @media screen and (max-width: 575px) {
+
+            html,
+            body {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                padding-left: 40px;
+                margin-bottom: -8px;
+                font-size: 1.25em;
+            }
+
+            table,
+            tbody,
+            tr,
+            td {
+                display: block;
+                width: 100%;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tr {
+                margin-bottom: 12px;
+                padding-bottom: 12px;
+                border-bottom: 2px solid #f5f5f5;    
+            }
+
+            td.play,
+            td.genre,
+            td.searches,
+            td.characters,
+            td.lines {
+                position: relative;
+                text-align: right;
+                padding-right: 12px;
+            }
+
+            td.play::before,
+            td.genre::before,
+            td.searches::before,
+            td.characters::before,
+            td.lines::before {
+                position: absolute;
+                display: block;
+                left: 12px;
+                color: #999;
+            }
+
+            td.play::before {
+                content: "Play";
+            }
+            td.genre::before {
+                content: "Genre";
+            }
+            td.searches::before {
+                content: "Searches";
+            }
+            td.characters::before {
+                content: "Characters";
+            }
+            td.lines::before {
+                content: "Lines";
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2>Shakespeare's</h2>    
+    <h1>Most popular plays</h1>
+
+    <table>
+        <thead>
+        <tr class='headers'>
+            <th class='play'>Play</th>
+            <th class='genre'>Genre</th>
+            <th class='searches'>Searches</th>
+            <th class='characters'>Characters</th>
+            <th class='lines'>Lines</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/Macbeth'>Macbeth</a></td>
+            <td class='genre'>Tragedy</td>
+            <td class='searches'>245,837</td>
+            <td class='characters'>45</td>
+            <td class='lines'>2,361</td>
+        </tr>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/Hamlet'>Hamlet</a></td>
+            <td class='genre'>Tragedy</td>
+            <td class='searches'>216,964</td>
+            <td class='characters'>39</td>
+            <td class='lines'>4,051</td>
+        </tr>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/Romeo-and-Juliet'>Romeo and Juliet</a></td>
+            <td class='genre'>Tragedy</td>
+            <td class='searches'>180,041</td>
+            <td class='characters'>42</td>
+            <td class='lines'>3,098</td>
+        </tr>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/Othello'>Othello</a></td>
+            <td class='genre'>Tragedy</td>
+            <td class='searches'>128,244</td>
+            <td class='characters'>29</td>
+            <td class='lines'>3,542</td>
+        </tr>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/King-Lear'>King Lear</a></td>
+            <td class='genre'>Tragedy</td>
+            <td class='searches'>106,605</td>
+            <td class='characters'>27</td>
+            <td class='lines'>3,469</td>
+        </tr>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/A-Midsummer-Nights-Dream'>A Midsummer Night's
+                Dream</a></td>
+            <td class='genre'>Comedy</td>
+            <td class='searches'>82,476</td>
+            <td class='characters'>27</td>
+            <td class='lines'>2,165</td>
+        </tr>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/Twelfth-Night'>Twelfth Night</a></td>
+            <td class='genre'>Comedy</td>
+            <td class='searches'>61,552</td>
+            <td class='characters'>18</td>
+            <td class='lines'>2,533</td>
+        </tr>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/The-Merchant-of-Venice'>The Merchant of
+                Venice</a></td>
+            <td class='genre'>Comedy</td>
+            <td class='searches'>58,923</td>
+            <td class='characters'>25</td>
+            <td class='lines'>2,660</td>
+        </tr>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/The-Tempest'>The Tempest</a></td>
+            <td class='genre'>Comedy</td>
+            <td class='searches'>57,533</td>
+            <td class='characters'>20</td>
+            <td class='lines'>2,284</td>
+        </tr>
+        <tr class='headers'>
+            <td class='play'><a href='http://www.shakespeareswords.com/Much-Ado-about-Nothing'>Much Ado about
+                Nothing</a></td>
+            <td class='genre'>Comedy</td>
+            <td class='searches'>56,800</td>
+            <td class='characters'>23</td>
+            <td class='lines'>2,648</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

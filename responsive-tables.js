@@ -19,6 +19,7 @@
         }
 
         event.currentTarget.classList.toggle('expanded');
+        event.stopImmediatePropagation();
     }
 
 }
